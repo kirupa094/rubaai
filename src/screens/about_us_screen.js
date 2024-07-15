@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react'
 import AboutComponent from '../components/about_us/about_us_component';
 
