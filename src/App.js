@@ -7,6 +7,7 @@ import HomeScreen from './screens/home_screen';
 import { PathsUrls } from './utils/path_url';
 import AboutUsScreen from './screens/about_us_screen';
 import OurTeamScreen from './screens/our_team_screen';
+import SupportScreen from './screens/support_screen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={PathsUrls.home} element={<HomeScreen />} />
           <Route path={PathsUrls.about} element={<AboutUsScreen />} />
           <Route path={PathsUrls.ourTeam} element={<OurTeamScreen />} />
+          <Route path={PathsUrls.support} element={<SupportScreen />} />
         </Routes>
       </Box>
 
