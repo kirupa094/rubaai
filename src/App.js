@@ -1,23 +1,23 @@
+import { Fragment } from 'react';
 import './App.css';
+import { Box} from '@mui/material';
+import NavBar from './components/appbar/appbar';
+import { Route, Routes } from 'react-router-dom';
+import HomeScreen from './screens/home_screen';
+import { PathsUrls } from './utils/path_url';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={''} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <NavBar />
+      <Box component="main">
+        <Routes>
+          <Route exact path="/" element={<HomeScreen />} />
+          <Route path={PathsUrls.home} element={<HomeScreen />} />
+        </Routes>
+      </Box>
+
+    </Fragment>
   );
 }
 
