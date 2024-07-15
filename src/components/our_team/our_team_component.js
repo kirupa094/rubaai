@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
-import Ganeshwaran from '../../assets/home/ganeswaran.jpeg';
+import Ganeshwaran from '../../assets/home/ganeswaran.jpg';
 import Croos from '../../assets/home/croos.jpeg';
 import Joice from '../../assets/home/joice.jpeg';
 

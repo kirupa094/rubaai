@@ -13,12 +13,12 @@ const AboutComponent = () => {
             <Container maxWidth="xl" sx={{ mt: 4 }}>
                 <Grid container spacing={4} justifyContent="center" direction='column'>
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, bgcolor: 'white' }}>
+                        <Card sx={{ borderRadius: 4, bgcolor: 'black' }}>
                             <CardContent>
-                                <Typography variant="h5" color="textPrimary" gutterBottom>
+                                <Typography variant="h5" color="white" gutterBottom>
                                     Mission
                                 </Typography>
-                                <Typography variant="body1" color="textSecondary" paragraph>
+                                <Typography variant="body1" color="white" paragraph>
                                     To simplify inward remittance, daily transactions and financial management by making financial services accessible, seamless, and secure through our innovative payment application.
                                 </Typography>
                             </CardContent>
@@ -27,12 +27,12 @@ const AboutComponent = () => {
 
 
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, bgcolor: 'white' }}>
+                        <Card sx={{ borderRadius: 4, bgcolor: 'black' }}>
                             <CardContent>
-                                <Typography variant="h5" color="textPrimary" gutterBottom>
+                                <Typography variant="h5" color="white" gutterBottom>
                                     Vision
                                 </Typography>
-                                <Typography variant="body1" color="textSecondary" paragraph>
+                                <Typography variant="body1" color="white" paragraph>
                                     To become the leading digital payment solution provider, enabling efficient financial transactions for individuals and businesses globally.
                                 </Typography>
                             </CardContent>
@@ -40,24 +40,24 @@ const AboutComponent = () => {
                     </Grid>
 
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, bgcolor: 'white' }}>
+                        <Card sx={{ borderRadius: 4, bgcolor: 'black' }}>
                             <CardContent>
-                                <Typography variant="h5" color="textPrimary" gutterBottom>
+                                <Typography variant="h5" color="white" gutterBottom>
                                     Objectives
                                 </Typography>
-                                <ul>
-                                    <li>
-                                        <Typography variant="body1" color="textSecondary">
+                                <ul >
+                                    <li color='white'>
+                                        <Typography variant="body1" color="white">
                                             Achieve a user base of 100,000+ within the first year.
                                         </Typography>
                                     </li>
-                                    <li>
-                                        <Typography variant="body1" color="textSecondary">
+                                    <li color='white'>
+                                        <Typography variant="body1" color="white">
                                             Establish partnerships with 500+ business organizations for integration.
                                         </Typography>
                                     </li>
-                                    <li>
-                                        <Typography variant="body1" color="textSecondary">
+                                    <li color='white'>
+                                        <Typography variant="body1" color="white">
                                             Process transactions worth LKR 70 million in the first year.
                                         </Typography>
                                     </li>
