@@ -9,12 +9,22 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Rubaai from "../../assets/logo/rubaai_logo.png";
+import Rubaai from '../../assets/logo/rubaai_logo.png';
+import { useNavigate } from 'react-router-dom';
+import { PathsUrls } from '../../utils/path_url';
 
-const pages = ['Home', 'About US', 'Our Team', 'Support'];
+const pages = ['Home', 'About Us', 'Our Team', 'Support'];
+const routes = [
+    PathsUrls.home,
+    PathsUrls.about,
+    PathsUrls.ourTeam,
+    PathsUrls.support,
+];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+    const navigate = useNavigate();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -24,7 +34,10 @@ function ResponsiveAppBar() {
         setAnchorElNav(null);
     };
 
-
+    const handleNavigate = (route) => {
+        navigate(route);
+        handleCloseNavMenu();
+    };
 
     return (
         <AppBar position="static" style={{ backgroundColor: '#212121' }}>
@@ -35,10 +48,7 @@ function ResponsiveAppBar() {
                         src={Rubaai}
                         alt="Logo"
                         sx={{
-                            display: {
-                                xs: 'none',
-                                md: 'flex',
-                            },
+                            display: { xs: 'none', md: 'flex' },
                             mr: -1,
                             mt: -2,
                             width: 70,
@@ -91,8 +101,8 @@ function ResponsiveAppBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                            {pages.map((page, index) => (
+                                <MenuItem key={page} onClick={() => handleNavigate(routes[index])}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -103,9 +113,7 @@ function ResponsiveAppBar() {
                         src={Rubaai}
                         alt="Logo"
                         sx={{
-                            display: {
-                                xs: 'flex', md: 'none'
-                            },
+                            display: { xs: 'flex', md: 'none' },
                             mt: -2,
                             mr: -1,
                             width: 70,
@@ -130,10 +138,10 @@ function ResponsiveAppBar() {
                         RUBAAI
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                        {pages.map((page, index) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => handleNavigate(routes[index])}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
@@ -149,4 +157,5 @@ function ResponsiveAppBar() {
         </AppBar>
     );
 }
+
 export default ResponsiveAppBar;
